@@ -1,4 +1,4 @@
-function helloConsole() {
+function showMessage() {
     console.log ("Hello Console");
   } 
-  helloConsole()
+  showMessage()
