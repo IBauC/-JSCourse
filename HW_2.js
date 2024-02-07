@@ -1,8 +1,12 @@
 // 1
 const user = {
-    firstName: "Boris",
+    name: "Boris",
     age: 24
 }
+
+user.firstName = user.name
+delete user.name;
+
 
 // переделайте объект таким образом, чтобы у него было 2 ключа: firstName и age
 
@@ -15,20 +19,21 @@ const fruitContainer = []
 // Измените название второго фрукта
 
 // 3
-let yearsOfService = 5; // стаж
-let performanceRating = 4; // оценка производительности
+let yearsOfService = 5;
+let performanceRating = 4;
 let bonus = 0;
+const topPerformance = performanceRating === 4 || performanceRating === 5;
 
-if (yearsOfService < 5 && (performanceRating === 4 || performanceRating === 5)) {
+if (yearsOfService < 5 && topPerformance) {
     bonus = 0.05;
-} else if (yearsOfService >= 5 && (performanceRating === 4 || performanceRating === 5)) {
+} else if (yearsOfService >= 5 && topPerformance) {
     bonus = 0.1;
 }
 
-let employeeInfo = {
-    yearsOfService: yearsOfService,
-    performanceRating: performanceRating,
-    bonus: bonus
+const employeeInfo = {
+    yearsOfService,
+    performanceRating,
+    bonus
 };
 
 if (bonus > 0) {
