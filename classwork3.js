@@ -37,14 +37,16 @@ while (i <= 20) {
 
 
 function createPhoneNumber(numbers){
-    if(numbers.length === 10 && 
-     numbers.every(num => typeof num === 'number' && !isNaN(num) && num >= 0 && num <= 9)){
- 
+  const isNumber = num => typeof num === 'number' && !isNaN(num) && num >= 0 && num <= 9;
+  const isValidInput = numbers.length === 10 && numbers.every(isNumber);
+  
+  if(isValidInput){
     let result = `(${numbers.slice(0, 3).join('')}) ${numbers.slice(3, 6).join('')}-${numbers.slice(6).join('')}`;
     return result;
   } else {
     return "Неверные данные для создания номера телефона.";
   }
 }
+
 const phoneNumber = createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]);
 console.log(phoneNumber);
