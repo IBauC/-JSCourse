@@ -62,7 +62,7 @@ function processText(a) {
 
 
 //5
-function encode_string(s, key) {
+function encodeString(s, key) {
    let encodedResult = ""; 
  
    for (let i = 0; i < s.length; i++) {
@@ -74,11 +74,11 @@ function encode_string(s, key) {
    return encodedResult; 
 }
  
-function decode_string(encoded_s, key) {
+function decodeString(encodedS, key) {
    let decodedResult = ""; 
    
-   for (let i = 0; i < encoded_s.length; i++) {
-     let encodedCharCode = encoded_s.charCodeAt(i);
+   for (let i = 0; i < encodedS.length; i++) {
+     let encodedCharCode = encodedS.charCodeAt(i);
      let charCode = encodedCharCode - key; 
      decodedResult += String.fromCharCode(charCode); 
    }
@@ -87,6 +87,6 @@ function decode_string(encoded_s, key) {
 }
 
 const key = 5;
-const encoded = encode_string("thisIsJavaScript", key); 
-const decoded = decode_string(encoded, key);
+const encoded = encodeString("thisIsJavaScript", key); 
+const decoded = decodeString(encoded, key);
 console.log(encoded, decoded);
