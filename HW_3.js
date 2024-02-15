@@ -58,7 +58,7 @@ function textTransformation(inputText) {
    return inputText;
 }
  
-console.log(textTransformation(" thisIsJavaScript!   ")); // thisisjXvXscXript! pfvtyb
+console.log(textTransformation(" thisIsJavaScript!   ")); // thisisjXvXscXript!
 
 
 //5
