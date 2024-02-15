@@ -1,28 +1,29 @@
 
 // 1
 function multiplyTable(n) {
-  if (Number.isInteger(n) && n > 0) {
-    generateMultiplicationTable(n);
-  } else {
-    console.log("Введите целое положительное число");
+    if (Number.isInteger(n) && n > 0) {
+      generateMultiplicationTable(n);
+    } else {
+      console.log("Введите целое положительное число");
+    }
   }
-}
-
-function generateMultiplicationTable(n) {
-  for (let i = 1; i <= n; i++) {
-    let row = generateRow(i, n);
-    console.log(row);
+  
+  function generateMultiplicationTable(n) {
+    for (let i = 1; i <= n; i++) {
+      let row = generateRow(i, n);
+      console.log(row);
+    }
   }
-}
-
-function generateRow(number, n) {
-  let row = ''; //
-  for (let j = 1; j <= n; j++) {
-    row += (number * j) + ' ';
+  
+  function generateRow(number, multiplier) {
+    let row = ''; 
+    for (let j = 1; j <= multiplier; j++) {
+      row += (number * j) + ' ';
+    }
+    return row;
   }
-  return row;
-}
-multiplyTable(5);
+  
+  multiplyTable(5);
 
 // 2
 function calculateFactorial(n) {
