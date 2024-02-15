@@ -44,14 +44,13 @@ function calculateFactorial(n) {
 
 
 //3
-function addWithLoss(a, b, z) {
-   let sum = a + b;
-   return +sum.toFixed(z);
+function addWithLoss(first, second, third) {
+   let sum = first + second;
+   return +sum.toFixed(third);
  }
  
  console.log(addWithLoss(1.5, 2.281, 3)); // Вывод: 3.781
  console.log(addWithLoss(1.5, 2.281, 2)); // Вывод: 3.78
-
 
  //4
 function processText(a) {
