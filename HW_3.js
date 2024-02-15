@@ -7,12 +7,14 @@ function multiplyTable(n) {
     console.log("Введите целое положительное число");
   }
 }
+
 function generateMultiplicationTable(n) {
   for (let i = 1; i <= n; i++) {
     let row = generateRow(i, n);
     console.log(row);
   }
 }
+
 function generateRow(number, n) {
   let row = ''; //
   for (let j = 1; j <= n; j++) {
@@ -60,10 +62,8 @@ function processText(a) {
 
 
 //5
-// Кодирование
-
 function encode_string(s, key) {
-   let encodedResult = ""; // Переменная для хранения закодированной строки
+   let encodedResult = ""; 
  
    for (let i = 0; i < s.length; i++) {
      let charCode = s.charCodeAt(i); 
@@ -74,10 +74,6 @@ function encode_string(s, key) {
    return encodedResult; 
 }
  
-console.log(encode_string("thisIsJavaScript!", 1)); // Вывод: "uijtJtKfbqujOdujwfst!"
- 
- 
- // Декодирования строки
 function decode_string(encoded_s, key) {
    let decodedResult = ""; 
    
@@ -87,7 +83,10 @@ function decode_string(encoded_s, key) {
      decodedResult += String.fromCharCode(charCode); 
    }
  
-   return decodedResult; // Возвращаем декодированную строку
+   return decodedResult;
 }
- 
-console.log(decode_string("uijtJtKfbqujOdujwfst!", 1)); // Вывод: "thisIsJavaScript!"
+
+const key = 5;
+const encoded = encode_string("thisIsJavaScript", key); 
+const decoded = decode_string(encoded, key);
+console.log(encoded, decoded);
