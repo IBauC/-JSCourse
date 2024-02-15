@@ -53,12 +53,12 @@ function addWithLoss(first, second, third) {
  console.log(addWithLoss(1.5, 2.281, 2)); // Вывод: 3.78
 
  //4
-function processText(a) {
-   a = a.trim().toLowerCase().replace(/a/g, "X");
-   return a;
- }
+function textTransformation(inputText) {
+   inputText = inputText.trim().toLowerCase().replace(/a/g, "X");
+   return inputText;
+}
  
- console.log(processText(" thisIsJavaScript!   ")); // thisisjXvXscXript!
+console.log(textTransformation(" thisIsJavaScript!   ")); // thisisjXvXscXript! pfvtyb
 
 
 //5
